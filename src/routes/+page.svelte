@@ -1,37 +1,51 @@
 <script>
   // Estilos personalizados para o componente
   const backgroundImageStyle = `
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('fundo.png');
+    background: linear-gradient(rgba(0, 226, 227, 1), rgba(0, 226, 227, 0.01)), url('backgroud.jpg');
     background-size: cover;
     background-position: center;
   `;
+
+  let email = "";
+  let telefone = "";
+  let mensagem = "";
+
+  function onSubmit() {
+    if (email == "" || email == undefined) {
+      alert("Preencha o email corretamente");
+      return;
+    }
+    if (telefone == "" || telefone == undefined) {
+      alert("Preencha o telefone corretamente");
+      return;
+    }
+    mensagem = `
+          Olá, vim através do seu formulário.%0A
+          %0A•Email%3A ${email} %0A
+          %0A•Telefone%3A ${telefone} %0A
+          `;
+    
+    window.open(`
+      https://chat.whatsapp.com/ElUN0doPblZCWhVQ8sYkwV
+      `);
+
+    window.open(`
+        https://api.whatsapp.com/send/?phone=5517997123536&text=${mensagem}
+      `);
+  }
 </script>
 
 <div
-  class="h-screen flex flex-col items-center justify-center"
+  class="w-full h-full flex flex-col items-center justify-center"
   style={backgroundImageStyle}
 >
-  <div class="text-black text-center w-full bg-white">
-    <h1 class="text-lg">Venha fazer <strong>parte dessa jornada</strong></h1>
-  </div>
-
+  <img src="frases.png" alt="" class="sm:w-96" />
   <!-- Formulário -->
   <div class="p-6 mt-4 flex flex-col items-center w-full">
     <div class="mb-4 w-full max-w-xs">
-      <label for="nome" class="block text-gray-700 font-bold text-center"
-        >Nome:</label
-      >
-      <input
-        type="text"
-        id="nome"
-        name="nome"
-        class="input input-bordered w-full"
-        placeholder="Seu nome"
-        required
-      />
-    </div>
-    <div class="mb-4 w-full max-w-xs">
-      <label for="email" class="block text-gray-700 font-bold text-center"
+      <label
+        for="nome"
+        class="block text-white font-bold text-center bg-[#00e2e3] mb-2 rounded-md"
         >E-mail:</label
       >
       <input
@@ -41,12 +55,28 @@
         class="input input-bordered w-full"
         placeholder="Seu e-mail"
         required
+        bind:value={email}
+      />
+    </div>
+    <div class="mb-4 w-full max-w-xs">
+      <label
+        for="email"
+        class="block text-white font-bold text-center bg-[#00e2e3] mb-2 rounded-md"
+        >Telefone:</label
+      >
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        class="input input-bordered w-full"
+        placeholder="Seu telefone"
+        required
+        bind:value={telefone}
       />
     </div>
     <button
-      type="submit"
-      class="btn btn-primary"
-      >Enviar</button
+      on:click={() => onSubmit()}
+      class="btn bg-[#00e2e3] hover:bg-[#00e2e3]">Enviar</button
     >
   </div>
   <div class="p-2 text-center">
@@ -57,9 +87,9 @@
     </p>
 
     <p class="text-gray-300 mt-8">
-      <span class="text-[#b89748]">Bárbara Albuquerque Imóveis</span>
+      <span class="text-[#00e2e3]">Bárbara Albuquerque Imóveis</span>
       | Todos os direitos reservados
-      <span class="text-[#b89748]">@2023</span>
+      <span class="text-[#00e2e3]">@2023</span>
     </p>
   </div>
 </div>
