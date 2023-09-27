@@ -87,7 +87,7 @@
     </p>
 
     <p class="text-gray-300 mt-8">
-      <span class="text-[#00e2e3]">Bárbara Albuquerque Imóveis</span>
+      <span class="text-[#00e2e3]">Tayse Reis</span>
       | Todos os direitos reservados
       <span class="text-[#00e2e3]">@2023</span>
     </p>
