@@ -23,14 +23,11 @@
           Olá, vim através do seu formulário.%0A
           %0A•Email%3A ${email} %0A
           %0A•Telefone%3A ${telefone} %0A
+          %0A•E vou entrar no grupo%3A https://chat.whatsapp.com/ENDv3HrzInFCu7FhX0QfJT %0A
           `;
 
     window.open(`
-        https://api.whatsapp.com/send/?phone=5517997123536&text=${mensagem}
-      `);
-
-    window.open(`
-    https://chat.whatsapp.com/ENDv3HrzInFCu7FhX0QfJT
+        https://api.whatsapp.com/send/?phone=5517991635816&text=${mensagem}
       `);
   }
 </script>
