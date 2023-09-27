@@ -24,13 +24,13 @@
           %0A•Email%3A ${email} %0A
           %0A•Telefone%3A ${telefone} %0A
           `;
-    
-    window.open(`
-      https://chat.whatsapp.com/ElUN0doPblZCWhVQ8sYkwV
-      `);
 
     window.open(`
         https://api.whatsapp.com/send/?phone=5517997123536&text=${mensagem}
+      `);
+
+    window.open(`
+    https://chat.whatsapp.com/ENDv3HrzInFCu7FhX0QfJT
       `);
   }
 </script>
