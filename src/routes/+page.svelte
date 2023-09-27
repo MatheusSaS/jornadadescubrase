@@ -38,7 +38,7 @@
 >
   <img src="frases.png" alt="" class="sm:w-96" />
   <!-- Formulário -->
-  <div class="p-6 mt-4 flex flex-col items-center w-full">
+  <div class="p-6 mt-11 flex flex-col items-center w-full">
     <div class="mb-4 w-full max-w-xs">
       <label
         for="nome"
